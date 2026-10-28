@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="id" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annur Mahardhika Putra — Engineer & Designer</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- External CSS Custom -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-slate-50 dark:bg-dark-bg text-slate-800 dark:text-slate-200 antialiased transition-colors duration-300 font-sans selection:bg-brand-500 selection:text-white">
+
+    <!-- Sticky Header Navbar -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="glass-panel rounded-2xl px-5 py-3 flex items-center justify-between shadow-sm border">
+                <!-- Brand Logo -->
+                <a href="#hero" class="flex items-center gap-2.5 group">
+                    <div class="w-9 h-9 rounded-xl bg-brand-600 flex items-center justify-center text-white font-bold text-lg shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
+                        A
+                    </div>
+                    <span class="font-bold text-lg tracking-tight text-slate-900 dark:text-white">
+                        Annur<span class="text-brand-500">.Project</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <div class="hidden md:flex items-center gap-1 bg-slate-100/80 dark:bg-slate-800/50 p-1 rounded-xl border border-slate-200/50 dark:border-slate-700/50">
+                    <a href="#about" class="nav-link px-4 py-1.5 text-xs font-semibold rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-400 transition-colors">Tentang</a>
+                    <a href="#skills" class="nav-link px-4 py-1.5 text-xs font-semibold rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-400 transition-colors">Keahlian</a>
+                    <a href="#portfolio" class="nav-link px-4 py-1.5 text-xs font-semibold rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-400 transition-colors">Portofolio</a>
+                    <a href="#experience" class="nav-link px-4 py-1.5 text-xs font-semibold rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-400 transition-colors">Pengalaman</a>
+                    <a href="#contact" class="nav-link px-4 py-1.5 text-xs font-semibold rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-400 transition-colors">Kontak</a>
+                </div>
+
+                <!-- Action Controls (Theme Toggle & Mobile Menu Trigger) -->
+                <div class="flex items-center gap-3">
+                    <!-- Dark/Light Theme Switcher -->
+                    <button id="theme-toggle" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-400 flex items-center justify-center transition-colors border border-slate-200 dark:border-slate-700" aria-label="Toggle Theme">
+                        <i class="fa-solid fa-moon dark:hidden text-sm"></i>
+                        <i class="fa-solid fa-sun hidden dark:block text-sm"></i>
+                    </button>
+
+                    <!-- CTA Header Button -->
+                    <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-medium text-xs shadow-md shadow-brand-600/20 transition-all hover:shadow-lg hover:shadow-brand-600/30">
+                        <i class="fa-regular fa-paper-plane text-xs"></i>
+                        <span>Diskusi Project</span>
+                    </a>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center border border-slate-200 dark:border-slate-700">
+                        <i class="fa-solid fa-bars text-sm"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Mobile Navigation Overlay -->
+            <div id="mobile-menu" class="hidden md:hidden mt-2 glass-panel rounded-2xl p-4 shadow-xl border border-slate-200 dark:border-slate-800 flex-col gap-2">
+                <a href="#about" class="mobile-nav-link px-4 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">Tentang Saya</a>
+                <a href="#skills" class="mobile-nav-link px-4 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">Keahlian & Tech Stack</a>
+                <a href="#portfolio" class="mobile-nav-link px-4 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">Portofolio</a>
+                <a href="#experience" class="mobile-nav-link px-4 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">Pengalaman Kerja</a>
+                <a href="#contact" class="mobile-nav-link px-4 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">Hubungi Saya</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="pt-28 pb-16 space-y-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- SECTION: HERO -->
+        <section id="hero" class="min-h-[80vh] flex flex-col justify-center pt-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Hero Text Column -->
+                <div class="lg:col-span-7 space-y-6">
+                    <!-- Availability Pill Badge -->
+                    <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-semibold">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                        </span>
+                        <span>Available for New Projects & Full-time Role</span>
+                    </div>
+
+                    <!-- Main Heading -->
+                    <div class="space-y-2">
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15]">
+                            Tentang Aku <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 via-brand-600 to-indigo-600">Bukan Orang lain</span>
+                        </h1>
+                        <p class="text-lg sm:text-xl font-medium text-slate-600 dark:text-slate-400">
+                            Specialist Videographer & Editor 
+                        </p>
+                    </div>
+
+                    <!-- Short Bio Paragraph -->
+                    <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed max-w-2xl">
+                        Perkenalkan Aku Mahasiswa Teknologi Informasi di uin ar-raniry Banda aceh aku lagi menjalani semester 5 Salam Kenal
+                    </p>
+
+                    <!-- Call To Action & CV Download -->
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <a href="#contact" class="px-6 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm shadow-lg shadow-brand-600/25 transition-all hover:shadow-brand-600/40 hover:-translate-y-0.5 flex items-center gap-2">
+                            <span>Hubungi Saya</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                        <button onclick="openCvModal()" class="px-6 py-3.5 rounded-xl bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/80 font-semibold text-sm transition-all hover:-translate-y-0.5 flex items-center gap-2 shadow-sm">
+                            <i class="fa-solid fa-file-pdf text-brand-500"></i>
+                            <span>Pratinjau CV</span>
+                        </button>
+                    </div>
+
+                    <!-- Key Metrics Strip -->
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-slate-200 dark:border-slate-800/80">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white flex items-center">
+                                <span class="counter" data-target="6">0</span>+
+                            </div>
+                            <div class="text-xs font-medium text-slate-500 dark:text-slate-400 mt-1">Tahun Pengalaman</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white flex items-center">
+                                <span class="counter" data-target="45">0</span>+
+                            </div>
+                            <div class="text-xs font-medium text-slate-500 dark:text-slate-400 mt-1">Proyek Selesai</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white flex items-center">
+                                <span class="counter" data-target="99">0</span>%
+                            </div>
+                            <div class="text-xs font-medium text-slate-500 dark:text-slate-400 mt-1">Kepuasan Klien</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Interactive Visual / Avatar Card Column -->
+                <div class="lg:col-span-5 flex justify-center lg:justify-end">
+                    <div class="relative w-full max-w-md">
+                        <!-- Subtle Background Glow -->
+                        <div class="absolute -top-4 -bottom-4 -left-4 -right-4 bg-gradient-to-tr from-brand-500/20 to-indigo-500/20 rounded-3xl blur-2xl -z-10"></div>
+                        
+                        <!-- Main Card -->
+                        <div class="glass-panel p-6 rounded-3xl shadow-xl space-y-6 relative border">
+                            <!-- Avatar Frame -->
+                            <div class="relative rounded-2xl overflow-hidden aspect-square border border-slate-200/60 dark:border-slate-700/60 group">
+                               <img src="https://lh3.googleusercontent.com/u/0/d/1LJC_szJfCMrUoUkEgeG7QUIpd6VxQl8K" alt="Alex Putra Profile" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80"></div>
+                                <div class="absolute bottom-4 left-4 right-4 text-white">
+                                    <p class="font-bold text-lg">Annur Mahardhika Putra, S.Kom.</p>
+                                    <p class="text-xs text-slate-300">Based in Jakarta, Indonesia</p>
+                                </div>
+                            </div>
+
+                            <!-- Quick Bio Pill Info -->
+                            <div class="grid grid-cols-2 gap-3 text-xs">
+                                <div class="p-3 rounded-xl bg-slate-100/70 dark:bg-slate-800/50 border border-slate-200/50 dark:border-slate-700/50">
+                                    <span class="block text-slate-500 dark:text-slate-400 font-medium mb-1">Spesialisasi</span>
+                                    <span class="font-bold text-slate-800 dark:text-slate-200">Videographer & Editor </span>
+                                </div>
+                                <div class="p-3 rounded-xl bg-slate-100/70 dark:bg-slate-800/50 border border-slate-200/50 dark:border-slate-700/50">
+                                    <span class="block text-slate-500 dark:text-slate-400 font-medium mb-1">Pendidikan</span>
+                                    <span class="font-bold text-slate-800 dark:text-slate-200">S1 Teknologi informasi</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: ABOUT & BENTO GRID -->
+        <section id="about" class="space-y-8 pt-10">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <h2 class="text-xs font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400">Biodata Singkat</h2>
+                <p class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Mengenal Saya Lebih Dekat</p>
+            </div>
+
+            <!-- Bento Grid Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                
+                <!-- Main Bio Box (Large 2 Col) -->
+                <div class="md:col-span-2 lg:col-span-2 bento-card glass-panel p-6 rounded-2xl flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-lg font-bold">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Profil & Filosofi Kerja</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            Saya percaya bahwa perangkat lunak yang hebat dihasilkan dari gabungan kode yang rapi, arsitektur yang kokoh, dan pemahaman mendalam atas kebutuhan pengguna akhir. Pendekatan saya selalu mengutamakan performa, kebersihan kode, serta estetika visual.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center gap-4 text-xs font-medium text-slate-500 dark:text-slate-400">
+                        <span><i class="fa-solid fa-check text-emerald-500 mr-1"></i> Clean Code</span>
+                        <span><i class="fa-solid fa-check text-emerald-500 mr-1"></i> Responsive First</span>
+                        <span><i class="fa-solid fa-check text-emerald-500 mr-1"></i> UX Oriented</span>
+                    </div>
+                </div>
+
+                <!-- Personal Info Grid Box -->
+                <div class="bento-card glass-panel p-6 rounded-2xl space-y-4">
+                    <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center text-lg font-bold">
+                        <i class="fa-solid fa-address-card"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">Informasi Diri</h3>
+                    <ul class="space-y-2.5 text-xs">
+                        <li class="flex justify-between border-b border-slate-200 dark:border-slate-800/60 pb-2">
+                            <span class="text-slate-500">Umur</span>
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">21 Tahun</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-200 dark:border-slate-800/60 pb-2">
+                            <span class="text-slate-500">Lokasi</span>
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">Sabang / Aceh</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-200 dark:border-slate-800/60 pb-2">
+                            <span class="text-slate-500">Status</span>
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">Mahasiswa / Freelance</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Languages Box -->
+                <div class="bento-card glass-panel p-6 rounded-2xl space-y-4">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center text-lg font-bold">
+                        <i class="fa-solid fa-language"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">Kemampuan Bahasa</h3>
+                    <div class="space-y-3 text-xs">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Bahasa Indonesia</span>
+                                <span class="text-slate-500">Native</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700 h-1.5 rounded-full overflow-hidden">
+                                <div class="bg-indigo-500 h-full w-full"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Bahasa Inggris</span>
+                                <span class="text-slate-500">Professional Working</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700 h-1.5 rounded-full overflow-hidden">
+                                <div class="bg-indigo-500 h-full w-[85%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education & Certifications Highlight Box -->
+                <div class="md:col-span-3 lg:col-span-4 bento-card glass-panel p-6 rounded-2xl">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <h4 class="font-bold text-slate-900 dark:text-white">Sedang Pendidikan</h4>
+                            </div>
+                            <div class="pl-11 space-y-1">
+                                <p class="text-sm font-bold text-slate-800 dark:text-slate-200">S.kom — Universitas Uin Ar-raniry</p>
+                                <p class="text-xs text-slate-500">2024 – - • IPK 3.66 / 4.00 (Predikat Cumlaude)</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-500 flex items-center justify-center">
+                                    <i class="fa-solid fa-certificate"></i>
+                                </div>
+                                <h4 class="font-bold text-slate-900 dark:text-white">Sertifikat</h4>
+                            </div>
+                            <div class="pl-11 space-y-1">
+                                <p class="text-sm font-bold text-slate-800 dark:text-slate-200">Belum taro</p>
+                                <p class="text-xs text-slate-500"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION: SKILLS & TECH STACK -->
+        <section id="skills" class="space-y-8 pt-10">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <h2 class="text-xs font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400">Teknologi & Tools</h2>
+                <p class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Tech Stack Teruji</p>
+            </div>
+
+            <!-- Skill Categories Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Category 1: Frontend Development -->
+                <div class="glass-panel p-6 rounded-2xl border space-y-5">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 dark:text-white">Frontend Dev</h3>
+                            <p class="text-xs text-slate-500">UI & Web Application</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="space-y-1">
+                            <div class="flex justify-between text-xs font-semibold">
+                                <span>React / Next.js</span>
+                                <span class="text-brand-500">95%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700/60 h-2 rounded-full overflow-hidden">
+                                <div class="bg-brand-500 h-full rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="flex justify-between text-xs font-semibold">
+                                <span>TypeScript</span>
+                                <span class="text-brand-500">90%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700/60 h-2 rounded-full overflow-hidden">
+                                <div class="bg-brand-500 h-full rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="flex justify-between text-xs font-semibold">
+                                <span>Tailwind CSS / HTML5</span>
+                                <span class="text-brand-500">98%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700/60 h-2 rounded-full overflow-hidden">
+                                <div class="bg-brand-500 h-full rounded-full" style="width: 98%"></div>
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="flex justify-between text-xs font-semibold">
+                                <span>Vue.js / Nuxt</span>
+                                <span class="text-brand-500">80%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700/60 h-2 rounded-full overflow-hidden">
+                                <div class="bg-brand-500 h-full rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2: Backend & Infrastructure -->
+                <div class="glass-panel p-6 rounded-2xl border space-y-5">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 dark:text-white">Backend & Cloud</h3>
+                            <p class="text-xs text-slate-500">API & Database System</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="space-y-1">
+                            <div class="flex justify-between text-xs font-semibold">
+                                <span>Node.js / Express</span>
+                                <span class="text-emerald-500">92%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700/60 h-2 rounded-full overflow-hidden">
+                                <div class="bg-emerald-500 h-full rounded-full" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="flex justify-between text-xs font-semibold">
+                                <span>PostgreSQL / MongoDB</span>
+                                <span class="text-emerald-500">88%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700/60 h-2 rounded-full overflow-hidden">
+                                <div class="bg-emerald-500 h-full rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="flex justify-between text-xs font-semibold">
+                                <span>Docker & AWS</span>
+                                <span class="text-emerald-500">82%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700/60 h-2 rounded-full overflow-hidden">
+                                <div class="bg-emerald-500 h-full rounded-full" style="width: 82%"></div>
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="flex justify-between text-xs font-semibold">
+                                <span>GraphQL / REST API</span>
+                                <span class="text-emerald-500">90%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700/60 h-2 rounded-full overflow-hidden">
+                                <div class="bg-emerald-500 h-full rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 3: Design & Workflow -->
+                <div class="glass-panel p-6 rounded-2xl border space-y-5">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-pen-nib"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 dark:text-white">Design & Tools</h3>
+                            <p class="text-xs text-slate-500">Prototyping & Git Workflow</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="space-y-1">
+                            <div class="flex justify-between text-xs font-semibold">
+                                <span>Figma / UI Design</span>
+                                <span class="text-purple-500">88%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700/60 h-2 rounded-full overflow-hidden">
+                                <div class="bg-purple-500 h-full rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Tailwind Config Script -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            200: '#bae0fd',
+                            300: '#7cc8fc',
+                            400: '#36affa',
+                            500: '#0c93eb',
+                            600: '#0074ca',
+                            700: '#015da5',
+                            800: '#064f88',
+                            900: '#0b4270',
+                            950: '#072a4a',
+                        },
+                        dark: {
+                            bg: '#090d16',
+                            card: '#111726',
+                            border: '#1e293b',
+                            hover: '#1e2638'
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
